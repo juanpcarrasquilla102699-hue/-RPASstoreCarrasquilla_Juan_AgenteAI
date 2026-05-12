@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RPAS Store — Drones de Precisión</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <style>
   :root {
     --bg: #080c10;
@@ -21,6 +22,129 @@
     --font-display: 'Bebas Neue', cursive;
     --font-body: 'DM Sans', sans-serif;
     --font-mono: 'Space Mono', monospace;
+    --chat--color-primary:#00b7ff;
+    --chat--color-primary-shade-50:#0095d9;
+
+    --chat--color-secondary:#03142c;
+
+    --chat--color-white:#ffffff;
+    --chat--color-light:#9fb3c8;
+    --chat--color-dark:#020817;
+    --chat--input--color:#dbeafe;
+    --chat--input--text-color: #ffffff;
+
+    --chat--input--placeholder:#5f7998;
+    --chat--window--background:#020617;
+    /* =========================
+      VENTANA CHAT
+    ========================== */
+
+    --chat--window--width:470px;
+    --chat--window--height:720px;
+
+    --chat--border-radius:28px;
+
+    --chat--spacing:1rem;
+
+    --chat--transition-duration:0.25s;
+
+    /* =========================
+      HEADER
+    ========================== */
+
+    --chat--header-height:110px;
+
+    --chat--header--background:
+      linear-gradient(
+        135deg,
+        #020617 0%,
+        #031b4e 45%,
+        #072b91 100%
+      );
+
+    --chat--header--color:#ffffff;
+
+    --chat--header--padding:
+      1.2rem 1.4rem;
+
+    /* =========================
+      BODY CHAT
+    ========================== */
+
+    --chat--body--background:#020617;
+
+    /* =========================
+      MENSAJES BOT
+    ========================== */
+
+    --chat--message--bot--background:
+      linear-gradient(
+        180deg,
+        #08204a 0%,
+        #041633 100%
+      );
+
+    --chat--message--bot--color:#dbeafe;
+
+    --chat--message--bot--border:
+      1px solid rgba(0,183,255,.25);
+
+    /* =========================
+      MENSAJES USER
+    ========================== */
+
+    --chat--message--user--background:
+      linear-gradient(
+        180deg,
+        #0b2d7a 0%,
+        #09245f 100%
+      );
+
+    --chat--message--user--color:#ffffff;
+
+    --chat--message--user--border:
+      1px solid rgba(0,183,255,.35);
+
+    /* =========================
+      INPUT
+    ========================== */
+
+    --chat--textarea--height:58px;
+
+    --chat--input--background:#03122b;
+
+    --chat--input--border:
+      1px solid rgba(0,183,255,.5);
+
+    --chat--input--color:#ffffff;
+
+    --chat--input--placeholder:#5f7998;
+
+    --chat--input--border-radius:18px;
+
+    /* =========================
+      BOTON ENVIAR
+    ========================== */
+
+    --chat--button--background:
+      linear-gradient(
+        135deg,
+        #00b7ff,
+        #0077ff
+      );
+
+    --chat--button--color:#ffffff;
+    --chat--footer--background: #b54040;
+    --chat--window--background:#020617;
+    --chat--button--border-radius:18px;
+
+    /* =========================
+      SOMBRAS
+    ========================== */
+
+    --chat--shadow:
+      0 0 30px rgba(0,183,255,.18);
+
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -623,16 +747,24 @@
     #productos { grid-template-columns: 1fr 1fr; gap: 12px; }
   }
 </style>
-<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
 	createChat({
 		webhookUrl: 'https://juanp1022.app.n8n.cloud/webhook/01f630c9-d598-4ebb-8008-426d6e8124b4/chat',
-	    initialMessages: [
+	  initialMessages: [
 		'👋 Bienvenido a RPAS Store',
 		'Soy tu asistente virtual especializado en drones.'
-	  ]
+	  ],
+
+    i18n:{
+      en:{
+        title:'🚁 RPAS STORE',
+        subtitle:'Asistente virtual especializado en drones',
+        footer:'',
+        inputPlaceholder:'Escribe tu mensaje...'
+      }
+    }
 	});
 </script>
 </head>
